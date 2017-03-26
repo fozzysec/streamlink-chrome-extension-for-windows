@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Streamlink Plugin",
+  "version": "0.1",
+  "description": "Chrome plugin to work with streamlink to open douyu, panda, bilibili",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*.douyu.com/*",
+        "https://*.douyu.com/*",
+        "http://*.douyutv.com/*",
+        "https://*.douyutv.com/*",
+        "https://*.panda.tv/*",
+        "http://*.panda.tv/*",
+        "http://*.bilibili.com/*",
+        "https://*.bilibili.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  }
+}
