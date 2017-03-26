@@ -9,7 +9,13 @@ Advanced system settings-Environment variables-Path-Edit-New
 add python's path, for me it is %userprofile%\\AppData\\Local\\Programs\\Python36\\Python\\Scripts
 
 ### Install Url Scheme to the system
-
+Edit install-url-scheme.reg
+```
+[HKEY_CLASSES_ROOT\streamlink\shell\open\command]
+@="\"C:\\Users\\fozzy\\streamlinkrun.bat\" \"%1\""
+```
+Change the path to your %userprofile% path.
+ 
 double-click `install-url-scheme.reg`
 this will install a url scheme to your system called 'streamlink'
 
